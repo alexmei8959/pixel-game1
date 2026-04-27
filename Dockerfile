@@ -20,8 +20,8 @@ FROM nginx:alpine
 # 替換 Nginx 預設設定檔 (為了處理 SPA 路由與 base path)
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# 將打包好的靜態檔案複製到 Nginx 的服務目錄
-COPY --from=build /app/dist /usr/share/nginx/html
+# 將打包好的靜態檔案複製到 Nginx 的服務目錄，並放在對應的 base 資料夾下
+COPY --from=build /app/dist /usr/share/nginx/html/pixel-game1
 
 EXPOSE 80
 
