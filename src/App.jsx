@@ -5,7 +5,7 @@ import Result from './components/Result';
 
 function App() {
   return (
-    <BrowserRouter basename="/pixel-game/">
+    <BrowserRouter basename="/pixel-game1/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/game" element={<Game />} />
